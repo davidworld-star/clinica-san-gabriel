@@ -1,0 +1,89 @@
+.formulario-cita {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.formulario-cita__cabecera h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.1rem;
+}
+
+.formulario-cita__cabecera p {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+}
+
+.formulario-cita__alerta,
+.formulario-cita__exito {
+  margin: 0;
+  padding: 0.65rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.formulario-cita__alerta {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.formulario-cita__exito {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.formulario-cita .campo {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.formulario-cita .campo label {
+  color: var(--color-ink);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.formulario-cita .campo input,
+.formulario-cita .campo select,
+.formulario-cita .campo textarea {
+  width: 100%;
+  min-height: 2.6rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 0.84rem;
+}
+
+.formulario-cita .campo textarea {
+  min-height: 5.2rem;
+  resize: vertical;
+}
+
+.formulario-cita .campo input:focus,
+.formulario-cita .campo select:focus,
+.formulario-cita .campo textarea:focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.14);
+  outline: none;
+}
+
+.formulario-cita__fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.formulario-cita > .boton {
+  width: 100%;
+}

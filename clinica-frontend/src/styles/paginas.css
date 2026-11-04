@@ -165,3 +165,33 @@
     margin-left: 0;
   }
 }
+
+.badge-estado {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  font-size: 0.68rem;
+  font-weight: 750;
+  text-transform: capitalize;
+}
+
+.badge-estado--pendiente {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.badge-estado--confirmada {
+  background: var(--color-info-soft);
+  color: var(--color-info);
+}
+
+.badge-estado--atendida {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.badge-estado--cancelada {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}

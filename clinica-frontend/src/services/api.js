@@ -112,3 +112,14 @@ export function crearCita(cita) {
     body: JSON.stringify(cita),
   })
 }
+
+export function actualizarCita(id, datos) {
+  return request(`citas/${id}/`, {
+    method: 'PATCH',
+    body: JSON.stringify(datos),
+  })
+}
+
+export function getEstados(signal) {
+  return request('estados/', { signal })
+}

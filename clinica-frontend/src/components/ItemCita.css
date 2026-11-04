@@ -1,0 +1,83 @@
+.item-cita {
+  display: grid;
+  grid-template-columns: 6.6rem minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.item-cita--seleccionada {
+  border-color: var(--color-primary-500);
+  background: var(--color-primary-50);
+}
+
+.item-cita__fecha {
+  display: grid;
+  gap: 0.2rem;
+  color: var(--color-muted);
+  font-size: 0.74rem;
+}
+
+.item-cita__fecha > svg {
+  color: var(--color-primary-600);
+}
+
+.item-cita__fecha strong {
+  color: var(--color-ink);
+  font-size: 0.8rem;
+}
+
+.item-cita__fecha span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.item-cita__datos {
+  min-width: 0;
+}
+
+.item-cita__datos h3 {
+  margin: 0 0 0.15rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.item-cita__datos p {
+  margin: 0 0 0.35rem;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+}
+
+.item-cita .boton {
+  min-height: 2.3rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  .item-cita {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .item-cita__fecha {
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+  }
+
+  .item-cita__fecha span {
+    justify-self: end;
+  }
+
+  .item-cita .boton {
+    justify-self: start;
+  }
+}

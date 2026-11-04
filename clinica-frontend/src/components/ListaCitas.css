@@ -1,0 +1,23 @@
+.lista-citas {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.lista-citas__vacio {
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+  padding: var(--space-10) var(--space-4);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.lista-citas__vacio strong {
+  color: var(--color-ink);
+}
+
+.lista-citas__vacio p {
+  margin: 0;
+  font-size: 0.82rem;
+}

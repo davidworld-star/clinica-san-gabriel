@@ -17,6 +17,7 @@ import PiePagina from './components/PiePagina'
 import TarjetaEspecialidad from './components/TarjetaEspecialidad'
 import MedicosPage from './pages/MedicosPage'
 import PacientesPage from './pages/PacientesPage'
+import PaginaCitas from './pages/PaginaCitas'
 import { getEspecialidades } from './services/api'
 import './App.css'
 
@@ -200,6 +201,7 @@ function App() {
 
         {paginaActiva === 'pacientes' && <PacientesPage />}
         {paginaActiva === 'medicos' && <MedicosPage />}
+        {paginaActiva === 'citas' && <PaginaCitas />}
       </main>
 
       <PiePagina />
