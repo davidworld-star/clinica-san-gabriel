@@ -1,0 +1,27 @@
+.filtro-especialidad {
+  display: grid;
+  gap: 0.3rem;
+  min-width: min(100%, 16rem);
+}
+
+.filtro-especialidad label {
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.filtro-especialidad select {
+  min-height: 2.7rem;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 0.86rem;
+}
+
+.filtro-especialidad select:focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.14);
+  outline: none;
+}

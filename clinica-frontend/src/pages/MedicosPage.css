@@ -1,0 +1,13 @@
+.medicos__filtro {
+  max-width: 28rem;
+}
+
+.medicos__filtro .panel__cuerpo {
+  padding: var(--space-4);
+}
+
+.medicos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+}

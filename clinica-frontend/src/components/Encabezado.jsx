@@ -4,13 +4,13 @@ import logoClinica from '../assets/logo-clinica.svg'
 import './Encabezado.css'
 
 const enlaces = [
-  { texto: 'Inicio', activo: true },
-  { texto: 'Pacientes', activo: false },
-  { texto: 'Médicos', activo: false },
-  { texto: 'Citas', activo: false },
+  { id: 'inicio', texto: 'Inicio' },
+  { id: 'pacientes', texto: 'Pacientes' },
+  { id: 'medicos', texto: 'Médicos' },
+  { id: 'citas', texto: 'Citas', deshabilitado: true },
 ]
 
-function Encabezado() {
+function Encabezado({ paginaActiva, onNavegar }) {
   const hoy = new Date()
   const fechaLarga = new Intl.DateTimeFormat('es-PE', {
     weekday: 'long',
@@ -23,7 +23,12 @@ function Encabezado() {
   return (
     <header className="encabezado">
       <div className="contenedor encabezado__barra">
-        <a className="encabezado__marca" href="/" aria-label="Clínica San Gabriel, inicio">
+        <button
+          className="encabezado__marca"
+          type="button"
+          onClick={() => onNavegar('inicio')}
+          aria-label="Clínica San Gabriel, ir al inicio"
+        >
           <img
             className="encabezado__logo"
             src={logoClinica}
@@ -35,21 +40,30 @@ function Encabezado() {
             <strong>Clínica San Gabriel</strong>
             <span>Cuidado cercano, atención confiable</span>
           </span>
-        </a>
+        </button>
 
         <nav className="encabezado__navegacion" aria-label="Navegación principal">
-          {enlaces.map((enlace) => (
-            <button
-              key={enlace.texto}
-              type="button"
-              className={`encabezado__enlace${enlace.activo ? ' encabezado__enlace--activo' : ''}`}
-              aria-current={enlace.activo ? 'page' : undefined}
-              disabled={!enlace.activo}
-              title={enlace.activo ? undefined : 'Disponible en los siguientes pasos'}
-            >
-              {enlace.texto}
-            </button>
-          ))}
+          {enlaces.map((enlace) => {
+            const activo = paginaActiva === enlace.id
+
+            return (
+              <button
+                key={enlace.id}
+                type="button"
+                className={`encabezado__enlace${activo ? ' encabezado__enlace--activo' : ''}`}
+                aria-current={activo ? 'page' : undefined}
+                disabled={enlace.deshabilitado}
+                title={
+                  enlace.deshabilitado
+                    ? 'La reserva de citas se habilita en el Paso 4'
+                    : undefined
+                }
+                onClick={() => onNavegar(enlace.id)}
+              >
+                {enlace.texto}
+              </button>
+            )
+          })}
         </nav>
 
         <div className="encabezado__fecha" aria-label={`Fecha actual: ${fechaVisible}`}>

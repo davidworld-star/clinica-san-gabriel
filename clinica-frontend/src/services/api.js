@@ -88,6 +88,19 @@ export function getPacientes(signal) {
   return request('pacientes/', { signal })
 }
 
+export function crearPaciente(paciente) {
+  return request('pacientes/', {
+    method: 'POST',
+    body: JSON.stringify(paciente),
+  })
+}
+
+export function eliminarPaciente(id) {
+  return request(`pacientes/${id}/`, {
+    method: 'DELETE',
+  })
+}
+
 export function getCitas(fecha, signal) {
   const consulta = fecha ? `?fecha=${encodeURIComponent(fecha)}` : ''
   return request(`citas/${consulta}`, { signal })

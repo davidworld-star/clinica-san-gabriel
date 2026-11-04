@@ -1,0 +1,49 @@
+.buscador-pacientes {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.buscador-pacientes__campo {
+  display: flex;
+  min-width: 16rem;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-soft);
+}
+
+.buscador-pacientes__campo:focus-within {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.14);
+}
+
+.buscador-pacientes__campo input {
+  width: 100%;
+  min-height: 2.6rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  font-size: 0.83rem;
+  outline: none;
+}
+
+.buscador-pacientes .boton {
+  min-height: 2.6rem;
+}
+
+@media (max-width: 620px) {
+  .buscador-pacientes,
+  .buscador-pacientes__campo {
+    width: 100%;
+  }
+
+  .buscador-pacientes .boton {
+    width: 100%;
+  }
+}

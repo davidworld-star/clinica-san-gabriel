@@ -18,7 +18,11 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: inherit;
+  text-align: left;
   text-decoration: none;
 }
 

@@ -1,0 +1,102 @@
+.formulario-paciente {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.formulario-paciente__cabecera h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.15rem;
+}
+
+.formulario-paciente__cabecera p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+
+.formulario-paciente__alerta,
+.formulario-paciente__exito {
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.formulario-paciente__alerta {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.formulario-paciente__exito {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.campo {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.campo label {
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.campo label span {
+  color: var(--color-danger);
+}
+
+.campo input {
+  width: 100%;
+  min-height: 2.65rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 0.88rem;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.campo input::placeholder {
+  color: var(--color-soft);
+}
+
+.campo input:focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.14);
+  outline: none;
+}
+
+.campo input[aria-invalid='true'] {
+  border-color: var(--color-danger);
+}
+
+.campo__error {
+  color: var(--color-danger);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.formulario-paciente__acciones {
+  padding-top: var(--space-2);
+}
+
+.formulario-paciente__acciones .boton {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .formulario-paciente {
+    padding: var(--space-5);
+  }
+}

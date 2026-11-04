@@ -1,0 +1,53 @@
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.7rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  font-size: 0.83rem;
+  font-weight: 700;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.boton:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.boton:disabled {
+  opacity: 0.55;
+}
+
+.boton--primario {
+  background: var(--color-primary-700);
+  color: #ffffff;
+}
+
+.boton--primario:hover:not(:disabled) {
+  background: var(--color-primary-800);
+}
+
+.boton--secundario {
+  border-color: var(--color-line);
+  background: var(--color-surface);
+  color: var(--color-primary-800);
+}
+
+.boton--secundario:hover:not(:disabled) {
+  border-color: var(--color-primary-200);
+  background: var(--color-primary-50);
+}
+
+.boton--peligro {
+  background: var(--color-danger);
+  color: #ffffff;
+}
+
+.boton--peligro:hover:not(:disabled) {
+  background: #991b1b;
+}
